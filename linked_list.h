@@ -5,7 +5,6 @@
 
 
 /* - TYPEDEFS - */
-
 // This line allows you to specify what kind of data you want the linked list
 // to contain. THIS CODE IS ONLY DESIGNED FOR NUMERIC TYPES - int, char, float,
 // double, etc.
@@ -20,8 +19,7 @@ typedef struct node Node;
 typedef struct list List;
 
 
-/* - FUNCTIONS - */
-
+/* - LIST FUNCTIONS - */
 // Generate a pointer to the list accessor
 List *make_list();
 // Append a new item to the end of the list
@@ -36,3 +34,8 @@ int list_size(List *list);
 DATA_TYPE list_get_value(List *list, size_t index);
 // Free all allocated memory in the list. The List * needs to be set to NULL
 bool destroy_list(List *list);
+
+
+/* - SORT FUNCTIONS - */
+// Perform a bubble sort algorithm on the list
+bool list_bubble_sort(List * list);
